@@ -66,7 +66,7 @@ document.getElementById("upload-form").addEventListener("submit", async function
   if (!file) return alert("Please select a file.");
 
   // Step 1: Request a presigned URL from your backend
-  const response = await fetch("https://YOUR-API-ID.execute-api.REGION.amazonaws.com/generate-presigned-post", {
+  const response = await fetch("https://yvfeduc7ma.execute-api.us-east-1.amazonaws.com", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ filename: file.name }),
