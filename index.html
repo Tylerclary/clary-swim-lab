@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Clary Swim Lab</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clary Swim Lab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="clary-swim-lab-logo.png" alt="Clary Swim Lab Logo" />
+      <h1>Clary Swim Lab</h1>
+    </div>
+    <p class="tagline">Expert Stroke Analysis from an Olympic Gold Medalist</p>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>Personalized Video Feedback from Tyler Clary</h2>
+      <p>
+        Submit your swim video and receive a detailed, professional analysis
+        from Olympic gold medalist Tyler Clary. Each breakdown is done by hand, 
+        with voice commentary and personalized recommendations to help you unlock 
+        your peak performance.
+      </p>
+    </section>
+
+    <section class="upload">
+      <h2>Submit Your Video</h2>
+      <p>We accept .mp4, .mov, or .avi up to 500MB.</p>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="video" accept="video/*" required />
+        <input type="text" name="first-name" placeholder="First Name" required />
+        <input type="text" name="last-name" placeholder="Last Name" required />
+        <input type="text" name="email" placeholder="Your Email" required />
+        <button type="submit">Upload for Analysis</button>
+      </form>
+      <p>After upload, your video will be verified and you will receive an invoice. Analysis begins upon receipt of payment.</p>
+    </section>
+
+    <section class="services">
+      <h2>What You’ll Receive</h2>
+      <ul>
+        <li>Detailed video breakdown by Tyler Clary</li>
+        <li>Voiceover commentary on your stroke technique</li>
+        <li>Email summary with recommended drills and key focus areas</li>
+        <li>Encouraging insights based on over 15 years of elite coaching experience</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Clary Swim Lab. All rights reserved.</p>
+    <p><a href="mailto:info@claryswimlab.com">info@claryswimlab.com</a></p>
+  </footer>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
