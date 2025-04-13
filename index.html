@@ -78,7 +78,7 @@ document.getElementById("upload-form").addEventListener("submit", async function
   const response = await fetch("https://xe1yx93vwa.execute-api.us-east-2.amazonaws.com", {
     method: "POST",
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({ filename: file.name })
+    body: JSON.stringify({ filename: file.name, contentType: file.type })
   });
 
   const data = await response.json();
