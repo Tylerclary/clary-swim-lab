@@ -8,6 +8,22 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="logo">Clary Swim Lab</a>
+    <button class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="#upload">Upload Video</a></li>
+      <li><a href="#instructions">Filming Guide</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
   <header class="header-grid">
   <div class="header-left">
     <img src="clary-swim-lab-logo.png" alt="Clary Swim Lab Logo" class="logo-img" />
@@ -25,7 +41,7 @@
   <main>
 
     <section class="upload">
-      <h2>Submit Your Video</h2>
+      <h2>Stroke Video Analysis - Submit Your Video</h2>
       <p>We accept .mp4, .mov, or .avi up to 500MB.</p>
       <form id="upload-form">
   			<input type="file" name="video" accept="video/*" required />
@@ -107,6 +123,14 @@
 });
 
  </script>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
