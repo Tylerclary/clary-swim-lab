@@ -35,7 +35,7 @@
   				<button type="submit">Upload for Analysis</button>
 			</form>
 			<p id="upload-status"></p>
-      <p>After upload, your video will be verified and you will receive an invoice. Analysis begins upon receipt of payment.</p>
+      <p>Analysis begins after payment is received.</p>
     </section>
 
     <section class="services">
@@ -92,7 +92,7 @@ document.getElementById("upload-form").addEventListener("submit", async function
 
   // Step 4: Upload directly to S3
   const uploadStatus = document.getElementById("upload-status");
-  uploadStatus.textContent = "Uploading...";
+  uploadStatus.textContent = "PLEASE WAIT: Uploading... Do not navigate away. This could take several minutes depending on your Internet Service Provider.";
 
   const s3Upload = await fetch(data.url, {
     method: "POST",
@@ -100,7 +100,7 @@ document.getElementById("upload-form").addEventListener("submit", async function
   });
 
   if (s3Upload.ok) {
-    uploadStatus.textContent = "Upload successful! You'll receive an email once your video has been verified.";
+    uploadStatus.textContent = "Upload successful! You'll receive an email invoice once your video has been verified.";
   } else {
     uploadStatus.textContent = "Upload failed. Please try again.";
   }
