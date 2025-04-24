@@ -80,5 +80,14 @@
   <footer>
     <p>&copy; 2025 Clary Swim Lab. All rights reserved. | <a href="/contact.html">Contact</a></p>
   </footer>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
